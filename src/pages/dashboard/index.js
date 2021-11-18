@@ -178,16 +178,16 @@ export default function Dashboard({ history }) {
 
             } else {
                 if (response.data.registration[0].approved == true) {
-                    document.getElementById(`id${indx}`).innerHTML = 'Registration Approved'
+                    document.getElementById(`id${indx}`).innerHTML = 'Approved'
                     document.getElementById(`id${indx}`).style.backgroundColor = "#5cb85c"
                     document.getElementById(`id${indx}`).style.display = 'false'
 
                 } else {
                     if (response.data.registration[0].approved == false) {
-                        document.getElementById(`id${indx}`).innerHTML = 'Registration Rejected'
+                        document.getElementById(`id${indx}`).innerHTML = 'Rejected'
                         document.getElementById(`id${indx}`).style.backgroundColor = "#d9534f"
                     } else {
-                        document.getElementById(`id${indx}`).innerHTML = 'Registration Request sent'
+                        document.getElementById(`id${indx}`).innerHTML = 'Pending..'
                         document.getElementById(`id${indx}`).style.backgroundColor = "#d9534f"
                     }
                 }
@@ -282,7 +282,7 @@ export default function Dashboard({ history }) {
                         <span>Event Price: {parseFloat(event.price).toFixed(2)}</span>
                         <span>Event Description: {event.description}</span>
                         {console.log(registrationCheck(event._id, indx))}
-                        <Button className='registration-button' id={`id${indx}`} onClick={() => registrationRequestHandler(event)}>Registration Request</Button>
+                        <Button className='registration-button' id={`id${indx}`} onClick={() => registrationRequestHandler(event)}>Registration </Button>
 
                     </li>
                 ))}
