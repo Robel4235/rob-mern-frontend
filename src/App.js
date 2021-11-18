@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { Container } from 'reactstrap';
+import Routes from './routes';
+import { ContextWrapper } from './user-context';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextWrapper>
+      <Container>
+        <h1>H-A-P</h1>
+        <div className='content' >
+          <Routes />
+        </div>
+      </Container>
+    </ContextWrapper>
+
   );
 }
 
