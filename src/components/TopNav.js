@@ -25,13 +25,13 @@ const TopNav = () => {
                     <Nav navbar>
                         <NavItem>
                             <Link to="/events">Events</Link>
-                        </NavItem>
+                        </NavItem> <br/>
                         <NavItem>
                             <Link to="/">Dashboard</Link>
-                        </NavItem>
+                        </NavItem><br/>
                         <NavItem>
                             <Link to="/myregistrations">My Registrations</Link>
-                        </NavItem>
+                        </NavItem><br/>
                     </Nav>
                 </Collapse>
             </Navbar>
