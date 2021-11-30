@@ -35,7 +35,7 @@ export default function Dashboard({ history }) {
 
     const socket = useMemo(
         () =>
-            socketio.connect('http://localhost:8000/', { query: { user: user_id } }),
+            socketio.connect('https://rob-mern-event-app.herokuapp.com', { query: { user: user_id } }),
         [user_id]
     );
 
